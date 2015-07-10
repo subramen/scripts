@@ -1,0 +1,7 @@
+#!/bin/bash
+vid_files=(*.avi)
+srt_files=(*.srt)
+for ((i=0;i<=${#vid_files[@]};i++)); do
+  vid="./${vid_files[i]%avi}srt"
+  mv "./${srt_files[i]}" $vid
+done 
